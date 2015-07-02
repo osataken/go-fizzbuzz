@@ -1,7 +1,14 @@
 package fizzbuzz
 
+import (
+	"strconv"
+	"math"
+)
+
 func fizzbuzz(input string) string {
-	if input == "3" || input == "6"{
+	floatInput, _ := strconv.ParseFloat(input, 64)
+
+	if math.Mod(floatInput, 3) == 0{
 		return "fizz"
 	}
 
