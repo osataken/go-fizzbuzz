@@ -43,3 +43,13 @@ func Test_input_6_should_return_fizz(t *testing.T) {
 		t.Errorf("Expected %V but was %V", expected, result)
 	}
 }
+
+func Test_input_15_should_return_fizzbuzz(t *testing.T) {
+	expected := "fizzbuzz"
+
+	result := fizzbuzz("15")
+
+	if result != expected {
+		t.Errorf("Expected %V but was %V", expected, result)
+	}
+}
