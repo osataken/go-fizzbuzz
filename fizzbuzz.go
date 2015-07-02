@@ -8,17 +8,15 @@ import (
 func fizzbuzz(input string) string {
 	floatInput, _ := strconv.ParseFloat(input, 64)
 
-	if input == "15" {
-		return "fizzbuzz"
+	result := input
+
+	if math.Mod(floatInput, 15) == 0 {
+		result = "fizzbuzz"
+	} else if math.Mod(floatInput, 3) == 0 {
+		result = "fizz"
+	} else if math.Mod(floatInput, 5) == 0 {
+		result = "buzz"
 	}
 
-	if math.Mod(floatInput, 3) == 0{
-		return "fizz"
-	}
-
-	if input == "5" {
-		return "buzz"
-	}
-
-	return "1"
+	return result
 }
